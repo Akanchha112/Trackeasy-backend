@@ -6,7 +6,13 @@ const app=express();
 const cors=require( 'cors' );
 const usermiddleware=require ('./middleware/user');
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://trackeasy.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 app.get("/", (req, res) => {
     res.json("Hello there");
