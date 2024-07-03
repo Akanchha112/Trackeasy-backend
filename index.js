@@ -8,6 +8,9 @@ const usermiddleware=require ('./middleware/user');
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.json("Hello");
+})
 app.post('/signup',(req, res)=>{
     const username = req.headers.username;
     const password = req.headers.password;
