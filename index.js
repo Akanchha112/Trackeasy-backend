@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.json("Hello");
+    res.json("Hello there");
 })
 app.post('/signup',(req, res)=>{
     const username = req.headers.username;
